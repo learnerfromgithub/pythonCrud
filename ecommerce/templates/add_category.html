@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h3>Add New Category</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="name">Category Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="description">Description</label>
+            <textarea name="description" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <a href="{% url 'category_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
