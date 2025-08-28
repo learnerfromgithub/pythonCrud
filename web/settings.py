@@ -23,9 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gm&x(a^ke%2b*_-xo&em!z1!sx)==dm#m*-n0b3#q0t!bl2xx_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    'shazoo.pythonanywhere.com',
+    'www.shazoo.pythonanywhere.com',
+    '127.0.0.1',
+    'localhost'
+]
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 
 # Application definition
@@ -55,6 +65,7 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'   # login ke baad redirect
 LOGOUT_REDIRECT_URL = 'login' # logout ke baad redirect
 
+WSGI_APPLICATION = "web.wsgi.application"
 
 TEMPLATES = [
     {
