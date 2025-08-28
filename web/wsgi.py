@@ -7,7 +7,7 @@ if path not in sys.path:
     sys.path.append(path)
 
 # Set the settings module
-os.environ['DJANGO_SETTINGS_MODULE'] = 'pythonCrud.settings'  # 👈 yahan apne project ka settings path likho
+os.environ['DJANGO_SETTINGS_MODULE'] = 'web.settings'  # 👈 yahan apne project ka settings path likho
 
 # Get WSGI application
 from django.core.wsgi import get_wsgi_application
